@@ -52,7 +52,7 @@
 ## 物理图的执行
 生成了 stage 和 task 以后，下一个问题就是 **task 如何执行来生成最后的 result？**
 
-回到 ComplexJob 的物理执行图，如果按照 MapReduce 的逻辑，从前到后执行，map() 产生中间数据 map outpus，经过 partition 后放到本地磁盘。再经过 shuffle-sort-aggregate 后生成 reduce inputs，最后 reduce() 执行得到 result。执行流程如下：
+回到 ComplexJob 的物理执行图，如果按照 MapReduce 的逻辑，从前到后执行，map() 产生中间数据 map outputs，经过 partition 后放到本地磁盘。再经过 shuffle-sort-aggregate 后生成 reduce inputs，最后 reduce() 执行得到 result。执行流程如下：
 
 ![MapReduce](PNGfigures/MapReduce.png)
 
